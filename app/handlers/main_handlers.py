@@ -9,3 +9,11 @@ router: APIRouter = APIRouter(tags=["main"])
 )
 async def root():
     return {"message": "Welcome to Pytex!"}
+
+
+@router.get(
+    "/ping",
+    description="Returns a ping response.",
+)
+async def ping():
+    return {"status": "ok"}

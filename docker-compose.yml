@@ -3,8 +3,6 @@ services:
     image: redis:latest
     restart: always
     command: ["redis-server", "--appendonly", "yes"]
-    ports:
-      - 127.0.0.1:63799:6379
     volumes:
       - redis_data:/data
 
