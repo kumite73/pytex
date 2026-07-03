@@ -14,7 +14,7 @@ services:
       dockerfile: Dockerfile
     image: pytex:local
     env_file:
-      - .env
+      - .env.prod
     ports:
       - "8000:8000"
     volumes:

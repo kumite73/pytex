@@ -2,9 +2,9 @@
 
 ## Запуск
 
-Скопировать `.env.example` в `.env`.
+Скопировать `.env.example` в `.env.prod`.
 
-Отредактировать `.env` и `docker-compose.yml` под свои параметры портов и адресов.
+Отредактировать `.env.prod` и `docker-compose.yml` под свои параметры портов и адресов.
 
 Запустить  `make build`
 
