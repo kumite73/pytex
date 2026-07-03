@@ -17,6 +17,7 @@ COPY app/ ./app
 RUN uv sync --frozen
 
 RUN mkdir -p /app/tmp
+RUN mkdir -p /app/static
 RUN ln -s /app/tmp /tmp
 VOLUME /tmp
 
