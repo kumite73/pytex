@@ -1,0 +1,51 @@
+{
+  "python.languageServer": "Pylance", // Оставляем Pylance для основного функционала
+  "ty.disableLanguageServices": false, // Отключаем языковые сервисы ty  "ty.diagnosticMode": "workspace", // Проверяем весь проект
+  "ty.inlayHints.variableTypes": true, // Показываем типы переменных
+  "ty.inlayHints.callArgumentNames": true, // Показываем имена аргументов
+  "ty.completions.autoImport": true, // Включаем авто-импорт
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "ty.diagnosticMode": "openFilesOnly",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.parameterHints.enabled": true,
+  "editor.hover.enabled": "on",
+  "editor.tabCompletion": "on",
+
+  "postman.settings.dotenv-detection-notification-visibility": false,
+  "python.terminal.activateEnvironment": true,
+  "python-envs.workspaceSearchPaths": ["./.venv"],
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+
+  "files.watcherExclude": {
+    "**/static/**": true,
+    "**/*.png": true,
+    "**/*.jpg": true,
+    "**/*.jpeg": true,
+    "**/*.webp": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/.git/**": true
+  },
+  // Исключить из результатов поиска
+  "search.exclude": {
+    "**/static/**": true,
+    "**/.venv/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.git/**": true
+  },
+
+  "cSpell.words": ["pydantic", "Pytex"]
+}

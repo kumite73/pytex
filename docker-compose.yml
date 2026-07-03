@@ -1,0 +1,26 @@
+services:
+  redis:
+    image: redis:latest
+    restart: always
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - 127.0.0.1:6379:6379
+    volumes:
+      - redis_data:/data
+
+  pytex:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pytex:local
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - /tmp:/tmp
+    depends_on:
+      - redis
+
+volumes:
+  redis_data:
