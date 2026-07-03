@@ -2,14 +2,14 @@ import json
 import logging
 from typing import Any
 
-from app.core.redis_helper import RedisHelper
+from redis.asyncio import Redis
 
 log = logging.getLogger(__name__)
 
 
 class HW1Service:
-    def __init__(self, redis_helper: RedisHelper):
-        self.redis = redis_helper.client
+    def __init__(self, redis: Redis):
+        self.redis = redis
 
     async def get_hw1_data(self, key: str) -> Any | None:
         result = await self.redis.get(key)
